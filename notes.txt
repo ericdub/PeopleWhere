@@ -1,0 +1,40 @@
+﻿http://schedule.dbrl.org/login.asp?staffaction=signin&email=web&password=program
+
+http://schedule.dbrl.org/reports/schedule.asp?selectedreporttype=0&reporttype=1&startdate=10%2F11%2F2011&enddate=10%2F11%2F2011&selectedstaffid=142&orgid=9&rotationorgid=0&rotationid=0&disprole=1&dispabsences=1&dispshifts=1
+
+http://schedule.dbrl.org/reports/schedule.asp?selectedreporttype=1&reporttype=1&startdate=10%2F11%2F2011&enddate=10%2F11%2F2011&selectedstaffid=142&orgid=9&rotationorgid=0&rotationid=0&disprole=1&dispabsences=1&dispshifts=1&dispbreaks=1&disporgname=0
+
+
+http://schedule.dbrl.org/reports/schedule.asp?selectedreporttype=2&reporttype=2&startdate=10%2F11%2F2011&enddate=10%2F11%2F2011&selectedstaffid=142&orgid=9&rotationorgid=0&rotationid=0&dispname=1&dispabsences=1&dispshifts=1
+
+$("td").each(function() {
+  txt = $(this).text();
+  last = txt.replace(/(\w+), (\w+)/g,"$1").substr(0,1);
+  $(this).text(txt.replace(/(\w+), (\w+)/g,"$2 "+last));
+});
+$("td").each(function() {
+  txt = $(this).text();
+  $(this).text(txt.replace(/ACES ./,""));
+});
+
+
+Circ Schedules
+
+Front Desk
+http://schedule.dbrl.org/reports/schedule.asp?selectedreporttype=2&reporttype=2&startdate=11%2F07%2F2011&enddate=11%2F07%2F2011&selectedstaffid=142&orgid=7&rotationorgid=0&rotationid=0&dispname=1&dispabsences=1&dispshifts=1
+
+Shelving
+http://schedule.dbrl.org/reports/schedule.asp?selectedreporttype=2&reporttype=2&startdate=11%2F07%2F2011&enddate=11%2F07%2F2011&selectedstaffid=142&orgid=8&rotationorgid=0&rotationid=0&dispname=1&dispabsences=1&dispshifts=1
+
+Organization IDs
+0 => 'All Organizations'
+1 => 'Daniel Boone Regional Library',
+3 => 'Callaway County Public Library',
+2 => 'Columbia Public Library',
+7 => 'Circulation - Front Desk',
+8 => 'Circulation - Shelving',
+10 => 'Maintenance',
+9 => 'Public Services',
+11 => 'Regional Services',
+5 => 'Outreach',
+4 => 'Southern Boone County'
